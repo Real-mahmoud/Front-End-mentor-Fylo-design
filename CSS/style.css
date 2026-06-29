@@ -204,3 +204,88 @@ header .container img {
         font-size: 14px;
     }
 }
+
+
+/* productivity */
+
+.productivity {
+    background-color: hsl(218, 28%, 13%);
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.productivity .container {
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+    gap: 200px;
+    align-items: center;
+    
+}
+
+.productivity .container .productivity-content {
+    text-align: left;
+    padding: 20px;
+}
+.productivity .container .productivity-content h2 {
+    color: hsla(0, 0%, 100%);
+    font-size: 30px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    margin: 20px 0;
+    width: 300px;
+    line-height: 1.2;
+}
+
+.productivity .container .productivity-content p {
+    color: hsla(0, 0%, 100%, 0.8);
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+.productivity .container .productivity-content .see-how {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    
+}
+.productivity .container .productivity-content .see-how::after {
+    content: "";
+    position: absolute;
+    width: 155px;
+    height: 1px;
+    background-color: hsl(176, 68%, 64%);
+    bottom: -2px;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+
+}
+.productivity .container .productivity-content .see-how:hover::after {
+    background-color: hsla(0, 0%, 100%, 0.8);
+
+}
+.productivity .container .productivity-content .see-how-btn {
+    color: hsl(176, 68%, 64%);
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    
+}
+.productivity .container .productivity-content .see-how:hover .see-how-btn {
+    color: hsla(0, 0%, 100%, 0.8);
+}
+
+@media (max-width: 500px ) {
+    .productivity .container {
+        padding: 0 20px;
+        grid-template-columns: 1fr;
+        gap: 0px;
+    }
+    .productivity-image img {
+        max-width: 330px;
+    }
+}
