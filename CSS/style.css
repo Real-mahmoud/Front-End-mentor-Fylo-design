@@ -288,6 +288,18 @@ header .container img {
     .productivity-image img {
         max-width: 330px;
     }
+    .productivity .container .productivity-content h2 {
+        font-size: 18px;
+    }
+      .productivity .container .productivity-content p {
+        font-size: 13px;    
+    }
+    .productivity .container .productivity-content .see-how-btn {
+        font-size: 13px;
+    }
+    .productivity .container .productivity-content .see-how::after {
+        width: 140px;
+    }
 }
 
 
@@ -308,7 +320,6 @@ header .container img {
 .testimonials .container::before {
     content: url('../images/bg-quotes.png');
     position: absolute;
-    height: 1px;
     top: -45px;
     left: 50px;
 }
@@ -342,4 +353,25 @@ header .container img {
     font-size: 14px;
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
+}
+
+@media (max-width: 500px ) {
+    .testimonials {
+        padding-left: 0px;
+    }
+    .testimonials .container {
+        grid-template-columns: 300px;
+        gap: 30px;
+        padding:0px 40px;
+    }
+    .testimonials .container::before {
+        left: 30px;
+    }
+    .testimonial p {
+        font-size: 13px;
+    }
+    .testimonial h3 {
+        font-size: 13px;
+    }
+    
 }
