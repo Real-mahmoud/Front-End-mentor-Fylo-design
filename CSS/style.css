@@ -125,7 +125,11 @@ header .container img {
 .hero .container .hero-content .start-btn:hover {
     background-color: hsl(176, 68%, 64%);
 }
-
+@media (max-width : 1300px ) {
+    .hero::after {
+        content:"";
+    }
+}
 @media (max-width : 500px ) {
     .hero {
         padding-top: 20px;
@@ -166,7 +170,7 @@ header .container img {
 
 .features .container {
     display: grid;
-    grid-template-columns: repeat(2, 400px);
+    grid-template-columns: repeat(2, minmax(300px, 400px));
     gap: 100px;
     align-items: center;
     justify-content: center;
@@ -191,6 +195,16 @@ header .container img {
     line-height: 1.4;
 }
 
+
+
+@media (max-width: 768px)  {
+
+    .features .container {
+        grid-template-columns: minmax(300px, 1fr);
+      
+        
+    }
+}
 @media (max-width : 500px ) {
 
     .features .container {
@@ -216,7 +230,7 @@ header .container img {
 
 .productivity .container {
     display: grid;
-    grid-template-columns: repeat(2, 500px);
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
     gap: 200px;
     align-items: center;
     
@@ -279,6 +293,35 @@ header .container img {
     color: hsla(0, 0%, 100%, 0.8);
 }
 
+@media (max-width: 1200px) { 
+    .productivity .container {
+        gap: 100px;
+    }
+    .productivity .container .productivity-image img {
+        max-width: 100%;
+    }
+}
+@media (max-width: 992px) { 
+    .productivity .container {
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+        gap: 50px;
+    }
+    .productivity .container .productivity-image img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) { 
+     .productivity .container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .productivity .container .productivity-image img {
+    max-width: 100%;
+    }
+}
+
+
 @media (max-width: 500px ) {
     .productivity .container {
         padding: 0 20px;
@@ -307,21 +350,20 @@ header .container img {
 
 .testimonials {
     background-color: hsl(218, 28%, 13%);
-    position: relative;
     padding-bottom: 300px;
-    padding-left: 100px;
 }
 .testimonials .container {
     display: grid;
-    grid-template-columns: repeat(3, 340px);
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
     gap: 40px;
     position: relative;
+    padding-left: 100px;
 }
 .testimonials .container::before {
     content: url('../images/bg-quotes.png');
     position: absolute;
     top: -45px;
-    left: 50px;
+    left: 90px;
 }
 
 .testimonial {
@@ -355,11 +397,23 @@ header .container img {
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
 }
+@media (max-width: 1200px) { 
+   .testimonials .container {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    gap: 40px;
+    
+}
+}
 
-@media (max-width: 500px ) {
-    .testimonials {
-        padding-left: 0px;
+
+@media (max-width: 768px) { 
+    .testimonials .container {
+        grid-template-columns:  minmax(300px, 1fr);
+        gap: 70px;
     }
+}
+@media (max-width: 500px ) {
+    
     .testimonials .container {
         grid-template-columns: 300px;
         gap: 30px;
@@ -518,7 +572,9 @@ footer .container .footer-content .fylo  p {
     line-height: 2;
     transition: all 0.3s ease-in-out;
 }
-
+.footer-links ul li a:hover {
+    color: hsla(0, 0%, 100%);
+}
 .social-media {
     display: flex;
     gap: 20px;
@@ -541,7 +597,7 @@ footer .container .footer-content .fylo  p {
     color: hsl(176, 68%, 64%);
     border-color: hsl(176, 68%, 64%);
 }
-@media (max-width: 500px ) {
+@media (max-width: 769px ) {
      footer {
         padding: 190px 0 50px;
     }
